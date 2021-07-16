@@ -1,0 +1,98 @@
+{
+ "properties": {
+  "displayName": "Require a tag and its value",
+  "policyType": "Custom",
+  "metadata": {
+   "category": "Tags",
+   "version": "0.0",
+   "createdBy": "9de887b6-c8df-41e0-9580-c5448f840fa2",
+   "createdOn": "2021-07-16T14:50:01.152125Z",
+   "updatedBy": null,
+   "updatedOn": null
+  },
+  "parameters": {
+   "tagValue - Department": {
+    "type": "array",
+    "metadata": {
+     "displayName": "tagValue - Department"
+    },
+    "allowedValues": [
+     "Department value 1",
+     "Department value 2",
+     "Department value 3"
+    ]
+   },
+   "tagValue - Business Organization": {
+    "type": "array",
+    "metadata": {
+     "displayName": "tagValue - Business Organization"
+    },
+    "allowedValues": [
+     "Business Organization Value 1",
+     "Business Organization Value 2",
+     "Business Organization Value 3"
+    ]
+   },
+   "tagValue - Supporting IT Group": {
+    "type": "array",
+    "metadata": {
+     "displayName": "tagValue - Supporting IT Group"
+    },
+    "allowedValues": [
+     "Supporting IT Group Value 1",
+     "Supporting IT Group Value 2",
+     "Supporting IT Group Value 3"
+    ]
+   }
+  },
+  "policyDefinitions": [
+   {
+    "policyDefinitionReferenceId": "Require a tag Department and its value_1",
+    "policyDefinitionId": "/subscriptions/8736e97d-b818-4d60-ab28-6b5d831ab58e/providers/Microsoft.Authorization/policyDefinitions/4c420d60-90ae-4e91-a3ca-6844e6c3e742",
+    "parameters": {
+     "tagName": {
+      "value": "Department"
+     },
+     "tagValue": {
+      "value": "[parameters('tagValue - Department')]"
+     }
+    },
+    "groupNames": []
+   },
+   {
+    "policyDefinitionReferenceId": "Require a tag Business Organization and its value_1",
+    "policyDefinitionId": "/subscriptions/8736e97d-b818-4d60-ab28-6b5d831ab58e/providers/Microsoft.Authorization/policyDefinitions/e1a1b324-e437-4cb5-842d-8933e04254a7",
+    "parameters": {
+     "tagName": {
+      "value": "Business Organization"
+     },
+     "tagValue": {
+      "value": "[parameters('tagValue - Business Organization')]"
+     }
+    },
+    "groupNames": []
+   },
+   {
+    "policyDefinitionReferenceId": "Require a tag Supporting IT Group and its value_1",
+    "policyDefinitionId": "/subscriptions/8736e97d-b818-4d60-ab28-6b5d831ab58e/providers/Microsoft.Authorization/policyDefinitions/e1a1b324-e437-4cb5-842d-8933e04254af",
+    "parameters": {
+     "tagName": {
+      "value": "Supporting IT Group"
+     },
+     "tagValue": {
+      "value": "[parameters('tagValue - Supporting IT Group')]"
+     }
+    },
+    "groupNames": []
+   }
+  ],
+  "policyDefinitionGroups": [
+   {
+    "name": "Custom initiative"
+   }
+  ]
+ },
+ "id": "/subscriptions/8736e97d-b818-4d60-ab28-6b5d831ab58e/providers/Microsoft.Authorization/policySetDefinitions/2e183e1a1c29424ea4b6963f",
+ "type": "Microsoft.Authorization/policySetDefinitions",
+ "name": "2e183e1a1c29424ea4b6963f"
+}
